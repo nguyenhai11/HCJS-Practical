@@ -2,74 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăn kí thông tin giới thiệu bản thân</title>
-    <link rel="stylesheet" type="text/css" href="css/Practical.css">
-    <link rel="icon" type="image/x-icon" href="img/fita.png">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<header>
-    <div class="logo"><img src="img/fita.png"></div>
-    <h2>SIGN UP FOR USER INFORMATION</h2>
-    <br>
-
+<header><img src="img/img.png" height="358" width="1650"/>
+    <p> Di sản văn hóa thế giới </p>
+    <blockquote> Vịnh Hạ Long nằm ở Đông Bắc Việt Nam, cách thủ đô Hà Nội 165km,
+        thuộc địa phận tỉnh Quảng Ninh. Đây là vùng biển đảo được xác định trong tọa
+        độ từ 106°56’ đến 107°37’ kinh độ Đông và 20°43’ đến 21°09’ vĩ độ Bắc với diện
+        tích 1.553km² gồm 1.969 hòn đảo, trong đó 90% là đảo đá vôi. Phía Bắc và Tây Bắc
+        Vịnh Hạ Long kéo dài từ thị xã Quảng Yên, qua thành phố Hạ Long, thành phố Cẩm Phả,
+        đến hết phần biển đảo huyện Vân Đồn; phía Đông Nam và phía Nam giáp bờ Tây Vịnh Bắc
+        Bộ, phía Tây Nam giáp đảo Cát Bà (Hải Phòng). Vịnh Hạ Long bao gồm cả vịnh Bái Tử Long. Vịnh Bái Tử Long có giá trị tương đồng với khu Di sản thiên nhiên thế giới vịnh Hạ Long về cảnh quan, địa chất, địa mạo, đa dạng sinh học và văn hóa lịch sử.
+    </blockquote>
+</header>
+<fieldset>
+    <legend>Đăng ký thành viên</legend>
     <span class="error-msg" id="total-msg"></span>
-    <form id="member-form" name="member">
+    <form class="form-group" name="member">
         <div class="form-group">
-            <label>Họ và tên</label>
-            <input type="text" name="fullname"  class="form-control normal-input">
+            <label>Họ và tên: </label>
+            <input type="text" name="name" class="form-control normal-input" placeholder="Họ và tên">
             <span class="error-msg"></span>
         </div>
-
         <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email"  class="form-control normal-input">
+            <input type="email" name="email" class="form-control normal-input">
             <span class="error-msg"></span>
         </div>
         <div class="form-group">
-            <label>Phone</label>
-            <input type="text" name="phone"  class="form-control normal-input">
+            <label>Phone </label>
+            <input type="text" name="phone" class="form-control normal-input" placeholder="Điện thoại">
             <span class="error-msg"></span>
         </div>
-
         <div class="form-group">
             <label>Giới tính</label>
-            <label><input type="radio" name="gender" value="1"
-                          class="form-control" checked>Nam</label>
-            <label><input type="radio" name="gender" value="0"
-                          class="form-control" checked>Nữ</label>
+            <label>
+                <input type="radio" name="gender" value="Nam" class="form-control"> Nam
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Nữ" class="form-control"> Nữ
+            </label>
         </div>
+        <p>Sở thích</p>
         <div class="form-group">
-            <label>Sở thích</label>
-            <label><input type="checkbox" name="interest"  value="1"
-                          class="form-control" checked>Thể thao</label>
-            <label><input type="checkbox" name="interest"  value="2"
-                          class="form-control" checked>Phim ảnh</label>
-            <label><input type="checkbox" name="interest"  value="3"
-                          class="form-control" checked>Đọc sách</label>
-            <label><input type="checkbox" name="interest"  value="4"
-                          class="form-control" checked>Âm nhạc</label>
-            <label><input type="checkbox" name="interest"  value="5"
-                          class="form-control" checked>Khác...</label>
-
-            <span class="error-msg"></span>
-        </div>
-
-        <div class="form-group">
-            <label>Giới thiệu bản thân</label>
-            <input type="textarea" name="introduceyourself"  class="form-control normal-input">
-            <span class="error-msg"></span>
+            <input type="checkbox" id="sothich1" name="sothich1" value="Thể thao">
+            <label for="sothich1"> Thể thao</label><br>
+            <input type="checkbox" id="sothich2" name="sothich2" value="Phim ảnh">
+            <label for="sothich2"> Phim ảnh</label><br>
+            <input type="checkbox" id="sothich3" name="sothich3" value="Đọc sách">
+            <label for="sothich3"> Đọc sách</label><br>
+            <input type="checkbox" id="sothich4" name="sothich4" value="Âm nhạc">
+            <label for="sothich4"> Âm nhạc</label><br>
+            <input type="checkbox" id="sothich5" name="sothich5" value="Khác">
+            <label for="sothich5"> Khác</label><br>
         </div>
 
-
+        <div class="form-group>
+            <label for=">Giới thiệu bản thân</label>
+            <textarea  name="introduce" rows="4" cols="50">
+            </textarea>
+        </div>
         <div class="form-group">
-            <label>&nbsp</label>
-            <input type="button" name="submit" value="Đăng ký"
-                   class="form-control" id="btnSubmit">
-            <input type="reset" name="reset" value="Làm lại" class="form-control">
+            <label>&nbsp;</label>
+            <input type="button" name="submit" value="Dang ky" class="form-control" id="btnSubmit">
+            <input type="reset" name="reset" value="Lam lai" class="form-control">
+
         </div>
     </form>
-
-</header>
-<script type="text/javascript" src="js/Practical.js"></script>
+</fieldset>
+<script src="js.js"></script>
+<footer>
+    <p>Tên: Nguyễn Văn Hải</p>
+    <p>Email: hainvth2108038@fpt.edu.vn</p>
+    <p>Class: T2108A1</p>
+</footer>
 </body>
 </html>
